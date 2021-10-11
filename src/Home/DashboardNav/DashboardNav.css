@@ -1,0 +1,51 @@
+.toggler {
+  position: fixed;
+}
+
+.dashboard-nav {
+  height: 80px;
+  background-color: rgb(12, 11, 11);
+  width: 100%;
+}
+
+.brand-name {
+  font-size: 50px;
+  font-family: "Teko", sans-serif;
+  margin-left: 30px;
+}
+.dashboard-brand-name a {
+  color: aliceblue;
+}
+
+.dashboard-link a {
+  color: rgb(149, 163, 177);
+
+  padding-bottom: 20px;
+  margin-left: 30px;
+
+  text-align: center;
+}
+
+.dashboard-link-items {
+  font-family: "Oswald", sans-serif;
+
+  font-size: 23px;
+}
+
+.login-button {
+  position: absolute;
+  right: 240px;
+}
+.register-button-li a {
+  background-color: rgba(86, 216, 50, 0.795);
+  color: black;
+  width: 130px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 9px;
+}
+.register-button {
+  position: absolute;
+  right: 80px;
+  background-color: whitesmoke;
+}
