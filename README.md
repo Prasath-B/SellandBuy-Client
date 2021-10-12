@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+  ## Here is the link for the project have a look.https://sellandbuy.netlify.app/
+  
+  ### Project involves React hooks, redux, routing etc..
+  
+  #### The backend of the project is done on node.js. And Source-Code for backend is on the diiferent repo
+
 ## Available Scripts
 
 In the project directory, you can run:
