@@ -1,35 +1,15 @@
 import React,{useEffect,useState} from 'react'
-import jwt from 'jsonwebtoken';
 import { fetchProducts,fetchNumber } from '../../components/redux/Action';
 import {connect} from 'react-redux'
 import './Posts.css'
-import axios from 'axios';
+import { useParams} from 'react-router-dom'
 
 
-const Posts = ({category,posts,fetchProducts,fetchNumber,number}) => {
+const Posts = ({posts,fetchProducts,fetchNumber,number}) => {
 
     const[permission,setpermission] = useState(false)
+    const {category} = useParams();
 
-    // useEffect(() => {
-    //     const token = localStorage.getItem('token')
-    //     const user = jwt.decode(token)
-
-    //   axios.post('http://localhost:5000/jwt',user)
-    //   .then((res)=> {
-    //       if(res.data ='success'){
-    //           setpermission(true)
-    //       }
-    //   })
-    //   .catch((err)=>console.log(err))
-    // }, [])
-      
-
- 
-
-    const [phoneNumber, setPhoneNumber] = useState()
-   
-
-        
     useEffect(()=>{
         const token = localStorage.getItem('token')
         
@@ -40,7 +20,7 @@ const Posts = ({category,posts,fetchProducts,fetchNumber,number}) => {
         }
         
         console.log(permission);
-    },[])
+    },[category])
 
  
 

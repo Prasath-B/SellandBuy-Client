@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import './DashboardNav.css'
-
+import {Link} from 'react-router-dom'
 
 
 
@@ -32,32 +32,36 @@ const DashboradNav = () => {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul className="navbar-nav  dashboard-link-items ">
     <li className="nav-item dashboard-link">
-        <a className="nav-link dashboard-link-items" href="/createpost">Post</a>
+    
+        <Link className="nav-link dashboard-link-items" to='/createpost' >Post</Link>
+      
+    </li>
+      <li className="nav-item dashboard-link ">
+      <Link  className="nav-link dashboard-link-items" to='/' >Dashboard</Link>
+    
       </li>
       <li className="nav-item dashboard-link ">
-        <a className="nav-link dashboard-link-items" href="/">Dashboard</a>
-      </li>
-      <li className="nav-item dashboard-link ">
-        <a className="nav-link dashboard-link-items" href="/feed/Car">Car</a>
+      <Link exact className="nav-link dashboard-link-items" to='/feed/Car' >Car</Link>
+        
       </li>
       <li className="nav-item dashboard-link">
-        <a className="nav-link dashboard-link-items" href="/feed/Bike">Bike</a>
+       <Link exact  className="nav-link dashboard-link-items" to='/feed/Bike' >Bike</Link>
       </li>
       <li className="nav-item dashboard-link">
-        <a className="nav-link dashboard-link-items" href="/feed/gadgets">Gadgets</a>
+       <Link className="nav-link dashboard-link-items" to='/feed/gadgets' >Gadgets</Link>
       </li>
     
       <li className="nav-item dashboard-link ">
-        <a className="nav-link dashboard-link-items" href="/feed/others">Others</a>
+       <Link  className="nav-link dashboard-link-items"  to='/feed/others' >Others</Link>
       </li>
 
               {token?<li  className="nav-item dashboard-link ">
          <a className="nav-link dashboard-link-items login-button" onClick={logout}>Logout</a>
       </li>  :  <div>  <li  className="nav-item dashboard-link ">
-         <a className="nav-link dashboard-link-items login-button" href="/login">Login</a>
+       <Link className="nav-link dashboard-link-items login-button" to='/login' >Login</Link>
       </li>
       <li  className="nav-item dashboard-link register-button-li ">
-         <a className="nav-link dashboard-link-items register-button " href="/register" >SignUp</a>
+       <Link to='/register' className="nav-link dashboard-link-items register-button " >Register</Link>
       </li></div>}
       <br />
       <br />
